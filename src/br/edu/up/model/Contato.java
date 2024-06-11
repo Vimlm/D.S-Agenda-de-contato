@@ -1,5 +1,7 @@
 package br.edu.up.model;
 
+import java.util.ArrayList;
+
 import br.edu.up.model.Endereco;
 
 public class Contato {

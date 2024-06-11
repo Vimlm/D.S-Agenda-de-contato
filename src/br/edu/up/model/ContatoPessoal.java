@@ -1,5 +1,7 @@
 package br.edu.up.model;
 
+import java.util.ArrayList;
+
 public class ContatoPessoal extends Contato {
   private String aniversario;
 
