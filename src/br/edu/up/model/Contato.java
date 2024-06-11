@@ -13,7 +13,7 @@ public class Contato {
     this.anotacoes = anotacoes;
   }
   
-  public String getNome() {
+  public String getNome() {6
     return nome;
   }
 
