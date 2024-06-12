@@ -2,8 +2,6 @@ package br.edu.up.model;
 
 import java.util.ArrayList;
 
-import br.edu.up.model.Endereco;
-
 public class Contato {
     private String nome;
     private String email;
@@ -57,5 +55,16 @@ public class Contato {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    @Override
+    public String toString() {
+        return "Contato{" +
+                "nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", telefone=" + telefone +
+                ", anotacoes=" + anotacoes +
+                ", endereco=" + endereco +
+                '}';
     }
 }
