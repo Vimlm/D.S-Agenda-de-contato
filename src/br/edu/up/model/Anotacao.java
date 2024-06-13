@@ -1,12 +1,12 @@
 package br.edu.up.model;
 import java.util.Date;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Anotacao {
   private String texto;
   private Date data = new Date();
+
+  SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
   public Anotacao() {
   }
@@ -35,8 +35,6 @@ public class Anotacao {
   public void setData(Date data) {
     this.data = data;
   }
-
-  SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
   //get data formatada
   public String getDataFormatada() {
