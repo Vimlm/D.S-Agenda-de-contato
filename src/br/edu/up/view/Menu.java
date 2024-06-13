@@ -1,41 +1,41 @@
 package br.edu.up.view;
 
-import br.edu.up.model.Console;
+import java.util.Scanner;
 
 public class Menu {
-  public static int principal() {
-    System.out.println("\n-----------Agenda de Contato-----------");
-    System.out.println("1- Adicionar Contato");
-    System.out.println("2- Excluir Contato");
-    System.out.println("3- Mostrar Todos Contatos");
-    System.out.println("4- Mostrar Somente um Contato");
-    System.out.println("0- Sair");
+    private static Scanner input = new Scanner(System.in);
 
-    return Console.readInt("\nInforme a opção: ");
-  }
+    public static int principal() {
+        System.out.println("\nMenu Principal:");
+        System.out.println("1. Adicionar Contato");
+        System.out.println("2. Excluir Contato");
+        System.out.println("3. Mostrar Todos os Contatos");
+        System.out.println("4. Mostrar Contato por Nome");
+        System.out.println("0. Sair");
+        System.out.print("Escolha uma opção: ");
+        return input.nextInt();
+    }
 
-  public static int adicionarContato() {
-    System.out.println("\n-----------Menu adicionar contato-----------");
-    System.out.println("1- Adicionar contato pessoal");
-    System.out.println("2- Adicionar contato comercial");
-    System.out.println("0- Voltar");
+    public static int adicionarContato() {
+        System.out.println("\nAdicionar Contato:");
+        System.out.println("1. Contato Pessoal");
+        System.out.println("2. Contato Profissional");
+        System.out.println("0. Voltar");
+        System.out.print("Escolha uma opção: ");
+        return input.nextInt();
+    }
 
-    return Console.readInt("\nInforme a opção: ");
-  }
+    public static int excluirContato() {
+        System.out.println("\nExcluir Contato:");
+        System.out.println("1. Contato Pessoal");
+        System.out.println("2. Contato Profissional");
+        System.out.println("0. Voltar");
+        System.out.print("Escolha uma opção: ");
+        return input.nextInt();
+    }
 
-  public static int excluirContato() {
-    System.out.println("\n-----------Menu excluir contato-----------");
-    System.out.println("1- Excluir contato pessoal");
-    System.out.println("2- Excluir contato comercial");
-    System.out.println("0- Voltar");
-
-    return Console.readInt("\nInforme a opção: ");
-  }
-
-  public static String mostrarContato() {
-    System.out.println("\n-----------Mostrar Somente Um Contato-----------");
-
-    return Console.readString("\nInforme o nome do contato que deseja mostrar: ");
-  }
-  
+    public static String mostrarContato() {
+        System.out.print("Informe o nome do contato: ");
+        return input.next();
+    }
 }

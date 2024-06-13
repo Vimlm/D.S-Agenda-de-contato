@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 
 public class Anotacao {
   private String texto;
-  private Date data = new Date();
+  private Date data;
 
   SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -18,6 +18,7 @@ public class Anotacao {
 
   public Anotacao(String texto) {
     this.texto = texto;
+    this.data = new Date();
   }
 
   public String getTexto() {
