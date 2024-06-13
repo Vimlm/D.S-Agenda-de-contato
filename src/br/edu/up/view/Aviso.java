@@ -1,6 +1,6 @@
 package br.edu.up.view;
 
-public class Avisos {
+public class Aviso {
   public static void opcaoInvalida() {
     System.out.println("\nOpção inválida, tente novamente.");
   }
