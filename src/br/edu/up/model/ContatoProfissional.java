@@ -2,10 +2,16 @@ package br.edu.up.model;
 
 import java.text.SimpleDateFormat;
 
+
+// Classe criada por: Camile, ajuda com o código: Victor //
 public class ContatoProfissional extends Contato {
   private String cnpj;
 
-  public ContatoProfissional(String nome, String email, Telefone telefone, Anotacao anotacoes, Endereco endereco, String cnpj) {
+  public ContatoProfissional() {
+  }
+
+  public ContatoProfissional(String nome, String email, Telefone telefone, Anotacao anotacoes, Endereco endereco,
+      String cnpj) {
     super(nome, email, telefone, anotacoes, endereco);
     this.cnpj = cnpj;
   }
@@ -18,12 +24,11 @@ public class ContatoProfissional extends Contato {
     this.cnpj = cnpj;
   }
 
-    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-
-  String dataAnotacao = dateFormat.format(getAnotacao().getData());
-
   @Override
   public String toString() {
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+    String dataAnotacao = dateFormat.format(getAnotacao().getData());
     return String.format("profissional;%s;%s;%s|%s;%s|%s;%s|%s|%s|%s;%s",
         getNome(),
         getEmail(),
