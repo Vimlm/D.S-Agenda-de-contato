@@ -9,10 +9,10 @@ import java.text.SimpleDateFormat;
 import br.edu.up.model.*;
 
 public class AgendaDAO {
-  public static ArrayList<Contato> getContatos(String agendaCSV) {
+  public static ArrayList<Contato> getContatos(String caminhoCsv) {
     ArrayList<Contato> listaContato = new ArrayList<>();
 
-    File arquivo = new File(agendaCSV);
+    File arquivo = new File(caminhoCsv);
 
     String header = "";
 
