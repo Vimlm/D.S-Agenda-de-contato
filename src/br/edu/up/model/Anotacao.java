@@ -2,6 +2,8 @@ package br.edu.up.model;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
+
+// Classe criada por: Camile, ajuda com o código: Victor //
 public class Anotacao {
   private String texto;
   private Date data;
