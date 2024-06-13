@@ -15,6 +15,9 @@ public class Contato {
         this.endereco = endereco;
     }
 
+    public Contato() {
+    }
+
     public String getNome() {
         return nome;
     }

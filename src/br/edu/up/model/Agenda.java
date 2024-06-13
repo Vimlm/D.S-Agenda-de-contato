@@ -2,6 +2,7 @@ package br.edu.up.model;
 
 import java.util.ArrayList;
 
+//Classe criada por Daniel
 public class Agenda {
 
     private ArrayList<Contato> contatos;

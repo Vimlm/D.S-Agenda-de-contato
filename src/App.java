@@ -1,5 +1,5 @@
-import br.edu.up.view.Avisos;
 import br.edu.up.view.Menu;
+import br.edu.up.view.Aviso;
 
 public class App {
   public static void main(String[] args) throws Exception {
@@ -25,7 +25,7 @@ public class App {
                 break;
 
               default:
-                Avisos.opcaoInvalida();
+                Aviso.opcaoInvalida();
                 break;
             }
 
@@ -40,11 +40,11 @@ public class App {
 
             switch (opcaoExcluir) {
               case 1:
-                //Excluir Contato Pessoal
+                // Excluir Contato Pessoal
                 break;
 
               case 2:
-                //Excluir Contato Comercial
+                // Excluir Contato Comercial
                 break;
 
               default:
@@ -60,15 +60,15 @@ public class App {
         case 4:
           String contato = Menu.mostrarContato();
 
-          //Pesquisar contato na base e mostrar o contato pesquisado.
+          // Pesquisar contato na base e mostrar o contato pesquisado.
           break;
 
         case 0:
-          Avisos.sair();
+          Aviso.sair();
           break;
 
         default:
-          Avisos.opcaoInvalida();
+          Aviso.opcaoInvalida();
           break;
       }
 

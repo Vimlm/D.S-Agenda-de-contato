@@ -11,10 +11,10 @@ public class ContatoProfissional extends Contato {
   }
 
   public ContatoProfissional(String nome, String email, Telefone telefone, Anotacao anotacoes, Endereco endereco,
-      String cnpj) {
-    super(nome, email, telefone, anotacoes, endereco);
-    this.cnpj = cnpj;
-  }
+          String cnpj) {
+        super(nome, email, telefone, anotacoes, endereco);
+        this.cnpj = cnpj;
+    }
 
   public String getCnpj() {
     return cnpj;
