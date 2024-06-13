@@ -1,14 +1,14 @@
 package br.edu.up.model;
 
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
 
 public class ContatoPessoal extends Contato {
   private String aniversario;
 
-  public ContatoPessoal(String nome, String email, Telefone telefone, ArrayList<Anotacoes> anotacoes, Endereco endereco,
-      String aniversario) {
+  public ContatoPessoal(String nome, String email, Telefone telefone, Anotacao anotacoes, Endereco endereco,
+      String aniverssario) {
     super(nome, email, telefone, anotacoes, endereco);
-    this.aniversario = aniversario;
+    this.aniversario = aniverssario;
   }
 
   public String getAniversario() {
@@ -19,15 +19,24 @@ public class ContatoPessoal extends Contato {
     this.aniversario = aniversario;
   }
 
+  SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+  String dataAnotacao = dateFormat.format(getAnotacao().getData());
+
   @Override
   public String toString() {
-    return "ContatoPessoal{" +
-      "nome='" + getNome() + '\'' +
-      ", email='" + getEmail() + '\'' +
-      ", telefone=" + getTelefone() +
-      ", anotacoes=" + getAnotacoes() +
-      ", endereco=" + getEndereco() +
-      ", aniversario='" + aniversario + '\'' +
-      '}';
+    return String.format("pessoal;%s;%s;%s|%s;%s|%s;%s|%s|%s|%s;%s",
+        getNome(),
+        getEmail(),
+        getTelefone().getDdd(),
+        getTelefone().getNumero(),
+        getAnotacao().getTexto(),
+        dataAnotacao,
+        getEndereco().getRua(),
+        getEndereco().getCidade(),
+        getEndereco().getEstado(),
+        getEndereco().getCep(),
+        getAniversario());
   }
+
 }

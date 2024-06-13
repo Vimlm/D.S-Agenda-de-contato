@@ -1,15 +1,13 @@
 package br.edu.up.model;
 
-import java.util.ArrayList;
-
 public class Contato {
     private String nome;
     private String email;
     private Telefone telefone;
-    private ArrayList<Anotacoes> anotacoes;
+    private Anotacao anotacoes;
     private Endereco endereco;
 
-    public Contato(String nome, String email, Telefone telefone, ArrayList<Anotacoes> anotacoes, Endereco endereco) {
+    public Contato(String nome, String email, Telefone telefone, Anotacao anotacoes, Endereco endereco) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
@@ -41,11 +39,11 @@ public class Contato {
         this.telefone = telefone;
     }
 
-    public ArrayList<Anotacoes> getAnotacoes() {
+    public Anotacao getAnotacao() {
         return anotacoes;
     }
 
-    public void setAnotacoes(ArrayList<Anotacoes> anotacoes) {
+    public void setAnotacoes(Anotacao anotacoes) {
         this.anotacoes = anotacoes;
     }
 
